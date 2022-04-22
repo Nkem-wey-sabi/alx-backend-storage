@@ -76,7 +76,7 @@ This project contains tasks for learning advanced MySQL features.
     ```
   + **Context**: Nothing related to MySQL, but perfect for user email validation - distribute the logic to the database itself!
 
-+ [ ] 6. **Add bonus**<br/>[6-bonus.sql](6-bonus.sql) contains a SQL script that creates a stored procedure `AddBonus` that adds a new correction for a student:
++ [x] 6. **Add bonus**<br/>[6-bonus.sql](6-bonus.sql) contains a SQL script that creates a stored procedure `AddBonus` that adds a new correction for a student:
   + The procedure `AddBonus` takes 3 inputs (in this order):
     + `user_id`, a `users.id` value (you can assume `user_id` is linked to an existing `users`).
     + `project_name`, a new or already exists `projects` - if no `projects.name` found in the table, you should create it.
@@ -131,7 +131,7 @@ This project contains tasks for learning advanced MySQL features.
     INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @project_py, 73);
     ```
 
-+ [ ] 7. **Average score**<br/>[7-average_score.sql](7-average_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageScoreForUser` that computes and store the average score for a student.
++ [x] 7. **Average score**<br/>[7-average_score.sql](7-average_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageScoreForUser` that computes and store the average score for a student.
   + **Note**: An average score can be a decimal.
   + The procedure `ComputeAverageScoreForUser` takes 1 input:
     + `user_id`, a `users.id` value (you can assume `user_id` is linked to an existing `users`).
@@ -185,15 +185,15 @@ This project contains tasks for learning advanced MySQL features.
     INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @project_py, 73);
     ```
 
-+ [ ] 8. **Optimize simple search**<br/>[8-index_my_names.sql](8-index_my_names.sql) contains a SQL script that creates an index `idx_name_first` on the table `names` and the first letter of `name`:
++ [x] 8. **Optimize simple search**<br/>[8-index_my_names.sql](8-index_my_names.sql) contains a SQL script that creates an index `idx_name_first` on the table `names` and the first letter of `name`:
   + Import this archived table dump: [names.7z](https://mega.nz/file/OVhTySJQ#ezfbZ1GT-06qQKl0yYz2yY3Gdlr8Vd3PTyBCixIc9d4).
   + Only the first letter of `name` must be indexed.
 
-+ [ ] 9. **Optimize search and score**<br/>[9-index_name_score.sql](9-index_name_score.sql) contains a SQL script that creates an index `idx_name_first_score` on the table `names` and the first letter of `name` and the `score`:
++ [x] 9. **Optimize search and score**<br/>[9-index_name_score.sql](9-index_name_score.sql) contains a SQL script that creates an index `idx_name_first_score` on the table `names` and the first letter of `name` and the `score`:
   + Import this archived table dump: [names.7z](https://mega.nz/file/OVhTySJQ#ezfbZ1GT-06qQKl0yYz2yY3Gdlr8Vd3PTyBCixIc9d4).
   + Only the first letter of `name` AND `score` must be indexed.
 
-+ [ ] 10. **Safe divide**<br/>[10-div.sql](10-div.sql) contains a SQL script that creates a function `SafeDiv` that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0:
++ [x] 10. **Safe divide**<br/>[10-div.sql](10-div.sql) contains a SQL script that creates a function `SafeDiv` that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0:
   + The function `SafeDiv` takes 2 arguments:
     + `a`, INT.
     + `b`, INT.
@@ -216,7 +216,7 @@ This project contains tasks for learning advanced MySQL features.
     INSERT INTO numbers (a, b) VALUES (6, 8);
     ```
 
-+ [ ] 11. **No table for a meeting**<br/>[11-need_meeting.sql](11-need_meeting.sql) contains a SQL script that creates a view `need_meeting` that lists all students that have a score under 80 (strict) and no `last_meeting` or more than 1 month.
++ [x] 11. **No table for a meeting**<br/>[11-need_meeting.sql](11-need_meeting.sql) contains a SQL script that creates a view `need_meeting` that lists all students that have a score under 80 (strict) and no `last_meeting` or more than 1 month.
   + The view `need_meeting` should return all students name when:
     + They score are under (strict) to 80.
     + **AND** no `last_meeting` date **OR** more than a month.
@@ -239,7 +239,7 @@ This project contains tasks for learning advanced MySQL features.
     INSERT INTO students (name, score) VALUES ("Alexa", 130);
     ```
 
-+ [ ] 12. **Average weighted score**<br/>[100-average_weighted_score.sql](100-average_weighted_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageWeightedScoreForUser` that computes and stores the  [average weighted score](https://www.wikihow.com/Calculate-Weighted-Average) for a student:
++ [x] 12. **Average weighted score**<br/>[100-average_weighted_score.sql](100-average_weighted_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageWeightedScoreForUser` that computes and stores the  [average weighted score](https://www.wikihow.com/Calculate-Weighted-Average) for a student:
   + The procedure `ComputeAverageScoreForUser` takes 1 input:
     + `user_id`, a `users.id` value (you can assume `user_id` is linked to an existing `users`).
   + A dump of the database and relevant table(s) is shown below:
@@ -293,7 +293,7 @@ This project contains tasks for learning advanced MySQL features.
     INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @project_py, 73);
     ```
 
-+ [ ] 13. **Average weighted score for all!**<br/>[101-average_weighted_score.sql](101-average_weighted_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageWeightedScoreForUsers` that computes and store the [average weighted score](https://www.wikihow.com/Calculate-Weighted-Average) for all students:
++ [x] 13. **Average weighted score for all!**<br/>[101-average_weighted_score.sql](101-average_weighted_score.sql) contains a SQL script that creates a stored procedure `ComputeAverageWeightedScoreForUsers` that computes and store the [average weighted score](https://www.wikihow.com/Calculate-Weighted-Average) for all students:
   + The procedure `ComputeAverageWeightedScoreForUsers` takes no input.
   + A dump of the database and relevant table(s) is shown below:
     ```sql
